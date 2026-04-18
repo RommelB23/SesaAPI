@@ -1,0 +1,766 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Sesa API",
+    "description": "API para la gestión de pólizas de seguro de vehículos",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/coverage/create": {
+      "post": {
+        "tags": [
+          "Coverage"
+        ],
+        "summary": "Registra un nuevo tipo de cobertura",
+        "description": "Requiere los datos del tipo de cobertura. El nombre de la cobertura no puede estar duplicado en el sistema.",
+        "operationId": "CreateCoverage",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCoverageDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Tipo de cobertura registrado exitosamente"
+          },
+          "400": {
+            "description": "No se pudo registrar el tipo de cobertura"
+          }
+        }
+      }
+    },
+    "/api/coverage/update": {
+      "put": {
+        "tags": [
+          "Coverage"
+        ],
+        "summary": "Actualiza un tipo de cobertura existente",
+        "description": "Requiere los datos del tipo de cobertura",
+        "operationId": "UpdateCoverage",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCoverageDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Tipo de cobertura actualizado exitosamente"
+          },
+          "400": {
+            "description": "Ocurrió un error actualizando el tipo de cobertura"
+          },
+          "404": {
+            "description": "No se pudo encontrar el tipo de cobertura"
+          }
+        }
+      }
+    },
+    "/api/coverage/get/{id}": {
+      "get": {
+        "tags": [
+          "Coverage"
+        ],
+        "summary": "Obtiene un tipo de cobertura por su Id",
+        "description": "Requiere el Id del tipo de cobertura",
+        "operationId": "GetCoverageById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Tipo de cobertura obtenido exitosamente"
+          },
+          "400": {
+            "description": "Ocurrió un error obteniendo el tipo de cobertura"
+          },
+          "404": {
+            "description": "No se pudo encontrar el tipo de cobertura"
+          }
+        }
+      }
+    },
+    "/api/coverage/get": {
+      "get": {
+        "tags": [
+          "Coverage"
+        ],
+        "summary": "Obtiene todos los tipos de coberturas",
+        "description": "Obtiene un listado de todos los tipos de coberturas",
+        "operationId": "GetCoverages",
+        "responses": {
+          "200": {
+            "description": "Tipos de coberturas obtenidos exitosamente"
+          },
+          "400": {
+            "description": "Ocurrió un error buscando los tipos de coberturas"
+          }
+        }
+      }
+    },
+    "/api/coverage/delete": {
+      "put": {
+        "tags": [
+          "Coverage"
+        ],
+        "summary": "Elimina un tipo de cobertura",
+        "description": "Elimina un tipo de cobertura existente (Se hace borrado lógico cambiando a 0 el valor de la columna IsActive)",
+        "operationId": "DeleteCoverage",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Tipo de cobertura eliminado exitosamente"
+          },
+          "400": {
+            "description": "Ocurrió un error eliminando el tipo de cobertura"
+          },
+          "404": {
+            "description": "No se encontró el tipo de cobertura"
+          }
+        }
+      }
+    },
+    "/api/customer/create": {
+      "post": {
+        "tags": [
+          "Customer"
+        ],
+        "summary": "Registra un nuevo cliente",
+        "description": "Requiere los datos del cliente. La identificación no puede estar duplicada en el sistema.",
+        "operationId": "CreateCustomer",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCustomerDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Cliente registrado exitosamente"
+          },
+          "400": {
+            "description": "No se pudo registrar el cliente"
+          }
+        }
+      }
+    },
+    "/api/customer/update": {
+      "put": {
+        "tags": [
+          "Customer"
+        ],
+        "summary": "Actualiza un cliente existente",
+        "description": "Requiere los datos del cliente",
+        "operationId": "UpdateCustomer",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCustomerDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Cliente actualizado exitosamente"
+          },
+          "400": {
+            "description": "Ocurrió un error actualizando el cliente"
+          },
+          "404": {
+            "description": "No se pudo encontrar el cliente"
+          }
+        }
+      }
+    },
+    "/api/customer/get/{id}": {
+      "get": {
+        "tags": [
+          "Customer"
+        ],
+        "summary": "Obtiene un cliente por su Id",
+        "description": "Requiere el Id del cliente",
+        "operationId": "GetCustomerById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Cliente obtenido exitosamente"
+          },
+          "400": {
+            "description": "Ocurrió un error obteniendo el cliente"
+          },
+          "404": {
+            "description": "No se pudo encontrar el cliente"
+          }
+        }
+      }
+    },
+    "/api/customer/get": {
+      "get": {
+        "tags": [
+          "Customer"
+        ],
+        "summary": "Obtiene todos los clientes",
+        "description": "Obtiene un listado de todos los clientes",
+        "operationId": "GetCustomers",
+        "responses": {
+          "200": {
+            "description": "Clientes obtenidos exitosamente"
+          },
+          "400": {
+            "description": "Ocurrió un error buscando los clientes"
+          }
+        }
+      }
+    },
+    "/api/customer/delete": {
+      "put": {
+        "tags": [
+          "Customer"
+        ],
+        "summary": "Elimina un cliente",
+        "description": "Elimina un cliente existente (Se hace borrado lógico cambiando a 0 el valor de la columna IsActive)",
+        "operationId": "DeleteCustomer",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Cliente eliminado exitosamente"
+          },
+          "400": {
+            "description": "Ocurrió un error eliminando el cliente"
+          },
+          "404": {
+            "description": "No se encontró el cliente"
+          }
+        }
+      }
+    },
+    "/api/policy/create": {
+      "post": {
+        "tags": [
+          "Policy"
+        ],
+        "summary": "Emite una póliza de seguro",
+        "description": "Crea una nueva póliza de seguro. Si se envía el Id de vehículo con valor 0 y una placa sin registrar, se toma como un registro nuevo y se guarda. Se valida que un cliente no tenga dos pólizas activas para la misma placa y que no se pueda emitir si el vehículo tiene más de 20 años de antigüedad",
+        "operationId": "CreatePolicy",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreatePolicyDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Póliza emitida exitosamente"
+          },
+          "400": {
+            "description": "No se pudo emitir la póliza"
+          }
+        }
+      }
+    },
+    "/api/policy/update": {
+      "put": {
+        "tags": [
+          "Policy"
+        ],
+        "summary": "Actualiza una póliza de seguro",
+        "description": "Actualiza una póliza de seguro existente (Solo los tipos de cobertura)",
+        "operationId": "UpdatePolicy",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdatePolicyDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Póliza actualizada exitosamente"
+          },
+          "400": {
+            "description": "Ocurrió un error actualizando la póliza"
+          },
+          "404": {
+            "description": "No se pudo encontrar la póliza"
+          }
+        }
+      }
+    },
+    "/api/policy/get/{id}": {
+      "get": {
+        "tags": [
+          "Policy"
+        ],
+        "summary": "Obtiene una póliza por su Id",
+        "description": "Requiere el Id de la póliza",
+        "operationId": "GetPolicyById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Póliza obtenida exitosamente"
+          },
+          "400": {
+            "description": "Ocurrió un error obteniendo la póliza"
+          },
+          "404": {
+            "description": "No se pudo encontrar la póliza"
+          }
+        }
+      }
+    },
+    "/api/policy/get": {
+      "get": {
+        "tags": [
+          "Policy"
+        ],
+        "summary": "Obtiene todas las pólizas emitidas",
+        "description": "Obtiene un listado de todas las pólizas emitidas",
+        "operationId": "GetPolicies",
+        "responses": {
+          "200": {
+            "description": "Pólizas obtenidas exitosamente"
+          },
+          "400": {
+            "description": "Ocurrió un error buscando las pólizas"
+          }
+        }
+      }
+    },
+    "/api/policy/delete": {
+      "put": {
+        "tags": [
+          "Policy"
+        ],
+        "summary": "Elimina una póliza",
+        "description": "Elimina una póliza existente (Se hace borrado lógico cambiando a 0 el valor de la columna IsActive)",
+        "operationId": "DeletePolicy",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Póliza eliminada exitosamente"
+          },
+          "400": {
+            "description": "Ocurrió un error eliminando la póliza"
+          },
+          "404": {
+            "description": "No se encontró la póliza"
+          }
+        }
+      }
+    },
+    "/api/vehicle/create": {
+      "post": {
+        "tags": [
+          "Vehicle"
+        ],
+        "summary": "Registra un nuevo vehículo",
+        "description": "Requiere los datos del vehículo. La placa debe tener un formato de una o dos letras y seis números, y no se permiten placas duplicadas en el sistema.",
+        "operationId": "CreateVehicle",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateVehicleDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Vehículo registrado exitosamente"
+          },
+          "400": {
+            "description": "No se pudo registrar el vehículo"
+          }
+        }
+      }
+    },
+    "/api/vehicle/update": {
+      "put": {
+        "tags": [
+          "Vehicle"
+        ],
+        "summary": "Actualiza un vehículo existente",
+        "description": "Requiere los datos del vehículo",
+        "operationId": "UpdateVehicle",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateVehicleDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Vehículo actualizado exitosamente"
+          },
+          "400": {
+            "description": "Ocurrió un error actualizando el vehículo"
+          },
+          "404": {
+            "description": "No se pudo encontrar el vehículo"
+          }
+        }
+      }
+    },
+    "/api/vehicle/get/{id}": {
+      "get": {
+        "tags": [
+          "Vehicle"
+        ],
+        "summary": "Obtiene un vehículo por su Id",
+        "description": "Requiere el Id del vehículo",
+        "operationId": "GetVehicleById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Vehículo obtenido exitosamente"
+          },
+          "400": {
+            "description": "Ocurrió un error obteniendo el vehículo"
+          },
+          "404": {
+            "description": "No se pudo encontrar el vehículo"
+          }
+        }
+      }
+    },
+    "/api/vehicle/get": {
+      "get": {
+        "tags": [
+          "Vehicle"
+        ],
+        "summary": "Obtiene todos los vehículos",
+        "description": "Obtiene un listado de todos los vehículos",
+        "operationId": "GetVehicles",
+        "responses": {
+          "200": {
+            "description": "Vehículos obtenidos exitosamente"
+          },
+          "400": {
+            "description": "Ocurrió un error buscando los vehículos"
+          }
+        }
+      }
+    },
+    "/api/vehicle/delete": {
+      "put": {
+        "tags": [
+          "Vehicle"
+        ],
+        "summary": "Elimina un vehículo",
+        "description": "Elimina un vehículo existente (Se hace borrado lógico cambiando a 0 el valor de la columna IsActive)",
+        "operationId": "DeleteVehicle",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Vehículo eliminado exitosamente"
+          },
+          "400": {
+            "description": "Ocurrió un error eliminando el vehículo"
+          },
+          "404": {
+            "description": "No se encontró el vehículo"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CoverageIdDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateCoverageDto": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "rate": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateCustomerDto": {
+        "type": "object",
+        "properties": {
+          "fullName": {
+            "type": "string",
+            "nullable": true
+          },
+          "identification": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreatePolicyDto": {
+        "type": "object",
+        "properties": {
+          "customerId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "vehicleId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "licensePlate": {
+            "type": "string",
+            "nullable": true
+          },
+          "brand": {
+            "type": "string",
+            "nullable": true
+          },
+          "model": {
+            "type": "string",
+            "nullable": true
+          },
+          "year": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "commercialValue": {
+            "type": "number",
+            "format": "double"
+          },
+          "issueDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "coveragesId": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CoverageIdDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateVehicleDto": {
+        "type": "object",
+        "properties": {
+          "licensePlate": {
+            "type": "string",
+            "nullable": true
+          },
+          "brand": {
+            "type": "string",
+            "nullable": true
+          },
+          "model": {
+            "type": "string",
+            "nullable": true
+          },
+          "year": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "commercialValue": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateCoverageDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "rate": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateCustomerDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fullName": {
+            "type": "string",
+            "nullable": true
+          },
+          "identification": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdatePolicyDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "coveragesId": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CoverageIdDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateVehicleDto": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "licensePlate": {
+            "type": "string",
+            "nullable": true
+          },
+          "brand": {
+            "type": "string",
+            "nullable": true
+          },
+          "model": {
+            "type": "string",
+            "nullable": true
+          },
+          "year": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "commercialValue": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

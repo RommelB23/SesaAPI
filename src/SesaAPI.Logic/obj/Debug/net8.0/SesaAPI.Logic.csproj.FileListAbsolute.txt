@@ -1,0 +1,15 @@
+C:\Users\romme\OneDrive\Documents\Proyectos\Seguros LAFISE\SESA\src\SesaAPI.Logic\bin\Debug\net8.0\SesaAPI.Logic.deps.json
+C:\Users\romme\OneDrive\Documents\Proyectos\Seguros LAFISE\SESA\src\SesaAPI.Logic\bin\Debug\net8.0\SesaAPI.Logic.dll
+C:\Users\romme\OneDrive\Documents\Proyectos\Seguros LAFISE\SESA\src\SesaAPI.Logic\bin\Debug\net8.0\SesaAPI.Logic.pdb
+C:\Users\romme\OneDrive\Documents\Proyectos\Seguros LAFISE\SESA\src\SesaAPI.Logic\obj\Debug\net8.0\SesaAPI.Logic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\romme\OneDrive\Documents\Proyectos\Seguros LAFISE\SESA\src\SesaAPI.Logic\obj\Debug\net8.0\SesaAPI.Logic.AssemblyInfoInputs.cache
+C:\Users\romme\OneDrive\Documents\Proyectos\Seguros LAFISE\SESA\src\SesaAPI.Logic\obj\Debug\net8.0\SesaAPI.Logic.AssemblyInfo.cs
+C:\Users\romme\OneDrive\Documents\Proyectos\Seguros LAFISE\SESA\src\SesaAPI.Logic\obj\Debug\net8.0\SesaAPI.Logic.csproj.CoreCompileInputs.cache
+C:\Users\romme\OneDrive\Documents\Proyectos\Seguros LAFISE\SESA\src\SesaAPI.Logic\obj\Debug\net8.0\SesaAPI.Logic.dll
+C:\Users\romme\OneDrive\Documents\Proyectos\Seguros LAFISE\SESA\src\SesaAPI.Logic\obj\Debug\net8.0\refint\SesaAPI.Logic.dll
+C:\Users\romme\OneDrive\Documents\Proyectos\Seguros LAFISE\SESA\src\SesaAPI.Logic\obj\Debug\net8.0\SesaAPI.Logic.pdb
+C:\Users\romme\OneDrive\Documents\Proyectos\Seguros LAFISE\SESA\src\SesaAPI.Logic\obj\Debug\net8.0\ref\SesaAPI.Logic.dll
+C:\Users\romme\OneDrive\Documents\Proyectos\Seguros LAFISE\SESA\src\SesaAPI.Logic\bin\Debug\net8.0\SesaAPI.Data.dll
+C:\Users\romme\OneDrive\Documents\Proyectos\Seguros LAFISE\SESA\src\SesaAPI.Logic\bin\Debug\net8.0\SesaAPI.Data.pdb
+C:\Users\romme\OneDrive\Documents\Proyectos\Seguros LAFISE\SESA\src\SesaAPI.Logic\obj\Debug\net8.0\SesaAPI.Logic.csproj.AssemblyReference.cache
+C:\Users\romme\OneDrive\Documents\Proyectos\Seguros LAFISE\SESA\src\SesaAPI.Logic\obj\Debug\net8.0\SesaAPI..D54C19BA.Up2Date

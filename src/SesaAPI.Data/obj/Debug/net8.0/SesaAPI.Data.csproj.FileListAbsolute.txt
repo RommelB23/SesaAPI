@@ -1,0 +1,14 @@
+C:\Users\romme\OneDrive\Documents\Proyectos\Seguros LAFISE\SESA\src\SesaAPI.Data\bin\Debug\net8.0\SesaAPI.Data.deps.json
+C:\Users\romme\OneDrive\Documents\Proyectos\Seguros LAFISE\SESA\src\SesaAPI.Data\bin\Debug\net8.0\SesaAPI.Data.runtimeconfig.json
+C:\Users\romme\OneDrive\Documents\Proyectos\Seguros LAFISE\SESA\src\SesaAPI.Data\bin\Debug\net8.0\SesaAPI.Data.dll
+C:\Users\romme\OneDrive\Documents\Proyectos\Seguros LAFISE\SESA\src\SesaAPI.Data\bin\Debug\net8.0\SesaAPI.Data.pdb
+C:\Users\romme\OneDrive\Documents\Proyectos\Seguros LAFISE\SESA\src\SesaAPI.Data\obj\Debug\net8.0\SesaAPI.Data.csproj.AssemblyReference.cache
+C:\Users\romme\OneDrive\Documents\Proyectos\Seguros LAFISE\SESA\src\SesaAPI.Data\obj\Debug\net8.0\SesaAPI.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\romme\OneDrive\Documents\Proyectos\Seguros LAFISE\SESA\src\SesaAPI.Data\obj\Debug\net8.0\SesaAPI.Data.AssemblyInfoInputs.cache
+C:\Users\romme\OneDrive\Documents\Proyectos\Seguros LAFISE\SESA\src\SesaAPI.Data\obj\Debug\net8.0\SesaAPI.Data.AssemblyInfo.cs
+C:\Users\romme\OneDrive\Documents\Proyectos\Seguros LAFISE\SESA\src\SesaAPI.Data\obj\Debug\net8.0\SesaAPI.Data.csproj.CoreCompileInputs.cache
+C:\Users\romme\OneDrive\Documents\Proyectos\Seguros LAFISE\SESA\src\SesaAPI.Data\obj\Debug\net8.0\SesaAPI.Data.dll
+C:\Users\romme\OneDrive\Documents\Proyectos\Seguros LAFISE\SESA\src\SesaAPI.Data\obj\Debug\net8.0\refint\SesaAPI.Data.dll
+C:\Users\romme\OneDrive\Documents\Proyectos\Seguros LAFISE\SESA\src\SesaAPI.Data\obj\Debug\net8.0\SesaAPI.Data.pdb
+C:\Users\romme\OneDrive\Documents\Proyectos\Seguros LAFISE\SESA\src\SesaAPI.Data\obj\Debug\net8.0\SesaAPI.Data.genruntimeconfig.cache
+C:\Users\romme\OneDrive\Documents\Proyectos\Seguros LAFISE\SESA\src\SesaAPI.Data\obj\Debug\net8.0\ref\SesaAPI.Data.dll

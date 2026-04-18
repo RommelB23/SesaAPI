@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/scripts/">
+    <File Path="scripts/SesaDB.sql" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/SesaAPI.Data/SesaAPI.Data.csproj" Id="c1f45900-7f7d-4bf4-a315-17aa58a51631" />
+    <Project Path="src/SesaAPI.Logic/SesaAPI.Logic.csproj" Id="e7bb2d87-bb85-4459-b503-6ae6a9c3f7b5" />
+    <Project Path="src/SesaAPI/SesaAPI.csproj" Id="df57d281-ef5d-439a-a4b9-68dfb86ea7d6" />
+  </Folder>
+</Solution>
